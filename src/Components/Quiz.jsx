@@ -5,13 +5,20 @@ import { data } from '../assets/data'
 const Quiz = () => {
    let [index, setIndex] = useState(1);
    let [question, setQuestion] = useState(data[index]);
+   let [locked, setLocked] = useState(false);
+
   const checkAnswer = (e, answer) => {
-    if (question.answer === answer) {
-      e.target.classList.add('correct');
+    if (locl === false) {
+      if (question.answer === answer) {
+        e.target.classList.add('correct');
+        setLocked(true);
+      }
+      else {
+        e.target.classList.add('wrong');
+      }
+      
     }
-    else {
-      e.target.classList.add('wrong');
-    }
+    
   }
 
   return (
