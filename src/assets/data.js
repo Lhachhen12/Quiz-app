@@ -1,0 +1,68 @@
+export const data = [
+    {
+        question: 'Which device is required for the internet connection?',
+        Option1: 'Router',
+        Option2: 'Modem',
+        Option3: 'LAN Cable',
+        Option4: 'Pen Drive',
+        answer: 1,
+    },
+    {
+        question: 'Which of the following is a programming language?',
+        Option1: 'HTML',
+        Option2: 'CSS',
+        Option3: 'JavaScript',
+        Option4: 'All of the above',
+        answer: 3,
+    },
+    {
+        question: 'Which of the following is not a programming language?',
+        Option1: 'Python',
+        Option2: 'Java',
+        Option3: 'Ruby',
+        Option4: 'HTML',
+        answer: 4,
+    },
+    {
+        question: 'Which of the following is a front-end framework?',
+        Option1: 'React',
+        Option2: 'Node',
+        Option3: 'Express',
+        Option4: 'MongoDB',
+        answer: 1,
+    },
+    {
+        question: 'Which of the following is a back-end framework?',
+        Option1: 'React',
+        Option2: 'Node',
+        Option3: 'Express',
+        Option4: 'MongoDB',
+        answer: 3,
+    },
+    {
+        question: 'which country is known as the land of the rising sun?',
+        Option1: 'India',
+        Option2: 'Japan',
+        Option3: 'China',
+        Option4: 'Nepal',
+        answer: 2,
+    },
+
+    {
+        question: 'which continent has the highest number of countries?',
+        Option1: 'Asia',
+        Option2: 'Africa',
+        Option3: 'Europe',
+        Option4: 'North America',
+        answer: 2,
+    },
+    {
+        question: 'which is the highest mountsin in the world?',
+        Option1: 'K2',
+        Option2: 'Lhotse',
+        Option3: 'Kangchenjunga',
+        Option4: 'Mount Everest',  
+        answer: 4,
+    },
+
+];
