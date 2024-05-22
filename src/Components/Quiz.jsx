@@ -3,7 +3,7 @@ import './Quiz.css';
 import { data } from '../assets/data';
 
 const Quiz = () => {
-  const [index, setIndex] = useState(0); // Adjusted initial index
+  const [index, setIndex] = useState(0); 
   const [question, setQuestion] = useState(data[index]);
   const [lock, setLock] = useState(false);
 
@@ -15,7 +15,7 @@ const Quiz = () => {
   const option_array = [Option1, Option2, Option3, Option4];
 
   const checkAnswer = (e, answer) => {
-    if (!lock) { // Fixed typo in 'lock'
+    if (!lock) { 
       if (question.answer === answer) {
         e.target.classList.add('correct');
       } else {
@@ -35,7 +35,15 @@ const Quiz = () => {
         option.current.classList.remove('correct', 'wrong');
       });
     } else {
-      alert('Quiz Finished!'); // Add your desired action after finishing the quiz
+      const allCorrect = data.every((question, i) => {
+        return question.answer === i + 1; 
+      });
+
+      if (allCorrect) {
+        alert('Congratulations! You completed the quiz successfully!');
+      } else {
+        alert('Quiz Finished!');
+      }
     }
   };
 
@@ -50,7 +58,7 @@ const Quiz = () => {
         <li ref={Option3} onClick={(e) => { checkAnswer(e, 3); }}>{question.Option3}</li>
         <li ref={Option4} onClick={(e) => { checkAnswer(e, 4); }}>{question.Option4}</li>
       </ul>
-      <button onClick={nextQuestion}>Next</button> {/* Added onClick handler */}
+      <button onClick={nextQuestion}>Next</button>
       <div className='index'>{index + 1} of {data.length} questions</div>
     </div>
   );
